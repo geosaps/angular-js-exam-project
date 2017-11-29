@@ -1,0 +1,33 @@
+<h2 class="text-center">Adding new album to library</h2>
+<form ng-submit="addAlbum(); go('#/albums')" ng-controller="AddAlbumController" class="addForm">
+  <div class="form-group">
+    <label for="title">Album title</label>
+    <input type="text" class="form-control" id="title" placeholder="Enter album title" ng-model="newTitle" required>
+  </div>
+  <div class="form-group">
+    <label for="artist">Artist name</label>
+    <input type="text" class="form-control" id="artist" placeholder="Enter artist name" ng-model="newArtist" required>
+  </div>
+  <div class="form-group">
+    <label for="country">Country</label>
+    <input type="text" class="form-control" id="country" placeholder="Enter country name" ng-model="newCountry" required>
+  </div>
+  <div class="form-group">
+    <label for="company">Company</label>
+    <input type="text" class="form-control" id="company" placeholder="Enter company name" ng-model="newCompany" required>
+  </div>
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="text" class="form-control" id="price" placeholder="Enter album price" ng-model="newPrice" required>
+  </div>
+  <div class="form-group">
+    <label for="year">Year</label>
+    <input type="text" class="form-control" id="year" placeholder="Enter year of album release"  ng-model="newYear" required>
+  </div>
+  <div class="form-group">
+    <label for="logoUrl">Logo Url (optional)</label>
+    <input type="text" class="form-control" id="logoUrl" placeholder="Enter URL of album logo"  ng-model="newLogoUrl">
+  </div>
+  <button type="submit" class="btn btn-success">Add album</button>
+  <a href="#/albums" class="return btn btn-danger">Return to albums library</a>
+</form>
