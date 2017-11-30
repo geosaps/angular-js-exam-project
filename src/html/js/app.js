@@ -1,8 +1,8 @@
 'use strict'
 
-var app = angular.module('musicApp', ['ngRoute']);
+var musicApp = angular.module('musicApp', ['ngRoute']);
 
-app.config(function($routeProvider) {
+musicApp.config(function($routeProvider) {
   $routeProvider
     .when('/', {
       templateUrl : '/html/html/home.html'

@@ -1,4 +1,4 @@
-app.controller('SingleAlbumController', function ($scope, httpService) {
+musicApp.controller('SingleAlbumController', function ($scope, httpService) {
     //show or hide delete section
     $scope.showDelete = false;
     $scope.showHideDeleteSection = function() {

@@ -1,4 +1,4 @@
-app.factory('httpService', function($http) {
+musicApp.factory('httpService', function($http) {
   var HTTP = {}
   //load all albums
   HTTP.loadAllAlbums = function () {

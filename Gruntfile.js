@@ -16,6 +16,14 @@ module.exports = function(grunt) {
 			unit: {
 				options: {
 					files: [
+            'src/html/libraries/angular.min.js',
+            'src/html/libraries/angular-mocks.js',
+            'https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.js',
+            'src/html/js/app.js',
+            'src/html/js/services/httpService.js',
+            'src/html/js/controllers/albumsController.js',
+            'src/html/js/controllers/singleAlbumController.js',
+            'src/html/js/controllers/addAlbumController.js',
 						'src/tests/*.js',
 					],
 					frameworks: ['jasmine'],

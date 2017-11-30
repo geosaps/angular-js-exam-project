@@ -1,4 +1,4 @@
-app.controller('AddAlbumController', function ($scope, $location, httpService) {
+musicApp.controller('AddAlbumController', function ($scope, $location, httpService) {
 
 var newAlbum = {};
 

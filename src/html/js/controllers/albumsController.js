@@ -1,8 +1,9 @@
-app.controller('AlbumsController', function ($scope, httpService) {
+musicApp.controller('AlbumsController', function ($scope, httpService) {
 
     var http = httpService;
     $scope.albums = [];
     $scope.pages = [];
+    $scope.filteredAlbums = [];
 
 
     //loading all albums

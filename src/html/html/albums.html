@@ -1,7 +1,7 @@
 <div ng-controller="AlbumsController" class="text-center">
   <header class="albums-header">
     <h2>Music library</h2>
-    <h4>There is {{count.value}} albums in library.</h4>
+    <h4>There are {{count.value}} albums in library.</h4>
     <input class="search hidden-xs hidden-sm" ng-model="query" type="text" placeholder="Type to search your favorite album..." ng-keyup="setNavigation()">
     <input class="search hidden-md hidden-lg" ng-model="query" type="text" placeholder="Type to search your favorite album..." ng-change="setDelay()">
     <a class="btn btn-success" href="#/add" role="button">Add new album</a>  
@@ -94,7 +94,7 @@
         </form>
         <div ng-show="showDontSave" class="save-section">
           <h3>Don't save changes?</h3>
-          <button class="btn btn-danger" ng-click="showHideEditSection(); showHideDontSaveSection()">No</button>
+          <button class="btn btn-danger" ng-click="showHideEditSection(); showHideDontSaveSection()">Don't save</button>
           <button class="btn btn-success" ng-click="showHideDontSaveSection()">Return</button>
         </div>
         <div ng-show="showSave" class="save-section">
@@ -119,5 +119,5 @@
       {{page}}
     </li>
   </ul>
-  <h2  ng-show="filteredAlbums.length === 0">Sorry, there is no such album</h2>
+  <h2  ng-show="filteredAlbums.length === 0">Sorry, there are no albums to show</h2>
   </div>
