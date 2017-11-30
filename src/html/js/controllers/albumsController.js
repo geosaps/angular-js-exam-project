@@ -1,9 +1,9 @@
-musicApp.controller('AlbumsController', function ($scope, httpService) {
+musicApp.controller('AlbumsController', function ($scope, $timeout, httpService) {
 
     var http = httpService;
     $scope.albums = [];
     $scope.pages = [];
-    $scope.filteredAlbums = [];
+    $scope.filteredAlbums = $scope.albums;
 
 
     //loading all albums
@@ -14,6 +14,7 @@ musicApp.controller('AlbumsController', function ($scope, httpService) {
         for (var i = 1; i < $scope.albumPages + 1 ; i++) {
           $scope.pages.push(i);
         }
+        $scope.filteredAlbums = $scope.albums;
       });
     };
     $scope.loadAlbums();
@@ -49,18 +50,16 @@ musicApp.controller('AlbumsController', function ($scope, httpService) {
 
     //set delay on phones
     $scope.setDelay = function() {
+      $scope.setPage(1);
       setTimeout(function() {
-        $scope.setNavigation();
+        $scope.setNavigation($scope.filteredAlbums.length);
         $scope.setPage(1);
       }, 100);
     };
 
 
     //set number of navigation pages
-    $scope.setNavigation = function() {
-      $scope.setPage(1);
-
-        x = $scope.filteredAlbums.length;
+    $scope.setNavigation = function(x) {
         $scope.pages = [];
         $scope.albumPages = x/20;
         for (var i = 1; i < $scope.albumPages + 1; i++) {
@@ -74,10 +73,8 @@ musicApp.controller('AlbumsController', function ($scope, httpService) {
     //delete album
     $scope.deleteAlbum = function(id) {
       http.deleteAlbum(id);
-      $scope.loadAlbums();
-      $scope.setNavigation($scope.filteredAlbums.length - 1);
+      $scope.setNavigation($scope.albums - 1);
+      $timeout($scope.loadAlbums, 100);
       $scope.countAlbums();
     };
-
-
 });

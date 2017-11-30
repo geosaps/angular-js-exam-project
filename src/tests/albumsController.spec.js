@@ -62,8 +62,7 @@ describe('Albums controller test', function() {
   it('check setting navigation function', function() {
     (function () {
       expect(scope.setNavigation).toBeDefined();
-      scope.filteredAlbums.length = 400;
-      scope.setNavigation();
+      scope.setNavigation(400);
       expect(scope.pages.length).toEqual(20);
     })();  
   });

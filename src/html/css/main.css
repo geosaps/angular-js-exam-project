@@ -52,19 +52,25 @@ body {
 .albums-nav {
   display: flex;
   justify-content: center;
+  height: 50px;
 }
 
 .albums-nav li {
+  background-color: #3482C5;
+  color: #FFF;
+  border-radius: 5px;
   margin: 10px;
-  width: 20px;
+  padding: 5px 0;
+  width: 30px;
 }
 
 .albums-nav li:hover {
+  background-color: #2870AD;
   cursor: pointer;
 }
 
 .albums-nav li.active {
-  color: red;
+  background-color: #054B86;
 }
 
 .page-search {
