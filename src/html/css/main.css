@@ -13,6 +13,12 @@ body {
 
 .btn-primary {
   margin: 10px;
+  background-color: #5571E7;
+  border-color: #5571E7;
+}
+
+.btn-primary:hover {
+  background-color: #2B46BA;
 }
 
 /* -----HOME-------*/
@@ -56,7 +62,7 @@ body {
 }
 
 .albums-nav li {
-  background-color: #3482C5;
+  background-color: #5571E7;
   color: #FFF;
   border-radius: 5px;
   margin: 10px;
@@ -65,12 +71,12 @@ body {
 }
 
 .albums-nav li:hover {
-  background-color: #2870AD;
+  background-color: #2B46BA;
   cursor: pointer;
 }
 
 .albums-nav li.active {
-  background-color: #054B86;
+  background-color: #2B46BA;
 }
 
 .page-search {
